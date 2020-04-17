@@ -7,4 +7,11 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
+import ReactOnRails from 'react-on-rails';
+import Search from '../components/Search';
+
+ReactOnRails.register({
+  Search
+});
+
 console.log('Hello World from Webpacker')
