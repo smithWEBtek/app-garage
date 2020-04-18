@@ -20,6 +20,7 @@
 
 import React from 'react';
 import axios from 'axios';
+import SearchResult from './SearchResult'
 
 export default class Search extends React.Component {
   state = { loading: false, results: [] };
@@ -41,12 +42,14 @@ export default class Search extends React.Component {
       <div className="ui raised segment no padding">
         <form method="GET" action="search">
           <div className="ui fluid icon transparent large input">
-            <input name="query" type="text" placeholder="Search apps..." onChange={this.onChange} autoComplete="off" />
+            <input name="query" type="text" placeholder="Enter search terms" onChange={this.onChange} autoComplete="off" />
             <button type="submit">
               <i className="search icon"></i>
             </button>
           </div>
         </form>
+        {/* <SearchResult result={this.state.results[0]} /> */}
+        )
       </div>
     );
   }
