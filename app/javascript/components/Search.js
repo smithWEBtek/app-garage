@@ -48,7 +48,7 @@ export default class Search extends React.Component {
             </button>
           </div>
         </form>
-        {/* <SearchResult result={this.state.results[0]} /> */}
+        {/* <SearchResult result={this.state.results} /> */}
         )
       </div>
     );
