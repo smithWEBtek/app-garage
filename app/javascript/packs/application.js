@@ -9,9 +9,11 @@
 
 import ReactOnRails from 'react-on-rails';
 import Search from '../components/Search';
+import SearchResult from '../components/SearchResult';
 
 ReactOnRails.register({
-  Search
+  Search,
+  SearchResult
 });
 
 console.log('Hello World from Webpacker')
