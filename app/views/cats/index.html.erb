@@ -1,0 +1,13 @@
+<div class="ui raised segment">
+  <h1 class="ui header"><%= params[:query] %> (<%= @cats.count %> results)</h1>  
+  <div class="ui divider"></div>
+  <div class="ui divided link items">
+    <% @cats.each do |cat| %>
+      <a href="<%= cat_path(cat) %>">
+        <div>
+          <img class="small image cat" src="<%= cat.url %>">
+        </div>
+      </a>
+    <% end %>
+  </div>
+</div>
