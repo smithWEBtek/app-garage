@@ -9,10 +9,10 @@ class CatsController < ApplicationController
   end
 
 
-  def getcat
-    @new_cat = Cat.getcat
+  def newcat
+    @new_cat = Cat.getcat[1]
     # binding.pry
-    redirect_to cat_path(@new_cat)
+    redirect_to cat_path(@new_cat.id)
   end
 
 end

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get '/search', to: 'search#index'
 
   resources :apps, only: :show
-  get '/getcat', to: 'cats#getcat'
+  get '/newcat', to: 'cats#newcat'
 
   resources :cats
 end
