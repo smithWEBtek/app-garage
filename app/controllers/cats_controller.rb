@@ -2,6 +2,10 @@ class CatsController < ApplicationController
 
   def index
     @cats = Cat.all
+    respond_to do |f|
+      f.html
+      f.json { render :json => @cats }
+    end
   end
 
   def show

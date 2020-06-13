@@ -8,10 +8,14 @@
 // layout file, like app/views/layouts/application.html.erb
 
 import ReactOnRails from 'react-on-rails';
+import CatShow from '../components/CatShow';
+import CatIndex from '../components/CatIndex';
 import Search from '../components/Search';
 import SearchResult from '../components/SearchResult';
 
 ReactOnRails.register({
+  CatIndex,
+  CatShow,
   Search,
   SearchResult
 });

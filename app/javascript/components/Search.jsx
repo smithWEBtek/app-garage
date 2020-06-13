@@ -18,11 +18,12 @@
 // }
 
 
-import React from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
+import CatIndex from './CatIndex';
 import SearchResult from './SearchResult'
 
-export default class Search extends React.Component {
+export default class Search extends Component {
   state = { loading: false, results: [] };
 
   onChange = (e) => {
@@ -40,6 +41,7 @@ export default class Search extends React.Component {
   render() {
     return (
       <div className="ui raised segment no padding">
+        <CatIndex cats={this.state.cats} />
         <form method="GET" action="search">
           <div className="ui fluid icon transparent large input">
             <input name="query" type="text" placeholder="Enter search terms" onChange={this.onChange} autoComplete="off" />
@@ -48,9 +50,8 @@ export default class Search extends React.Component {
             </button>
           </div>
         </form>
-        {/* <SearchResult result={this.state.results} /> */}
-        )
+        <SearchResult result={this.state.results} />
       </div>
-    );
+    )
   }
 }
