@@ -10,6 +10,7 @@ class Cat < ApplicationRecord
     JSON.parse(@resp.body).each do |r|
       new_cat = Cat.create(url: r["url"])
     end
+
     [@resp, new_cat]
   end
 end

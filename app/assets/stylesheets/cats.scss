@@ -1,3 +1,57 @@
 // Place all the styles related to the cats controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.cats-navbar {
+  display: inline;
+}
+
+button.cats-index,
+button.newcat {
+  background-color: rgb(209, 215, 218);
+  border: 2px solid gray;
+  border-radius: 10px;
+  color: white;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  width: 8rem;
+
+  &:hover {
+    border: 2px solid rgb(5, 247, 114);
+  }
+}
+
+// #newcat {
+//   background-color: rgb(209, 215, 218);
+//   border: 2px solid gray;
+//   border-radius: 10px;
+//   color: white;
+//   margin: 1rem 0;
+//   padding: 0.5rem;
+//   width: 8rem;
+// }
+
+.cats {
+  display: flex;
+
+  &__cat {
+    border: 1px solid gray;
+    border-radius: 10px;
+    grid-column: 2;
+    margin-bottom: 2rem;
+    width: 15%;
+    min-height: 80%;
+
+    &--title {
+      background-color: lightgray;
+      border-radius: 10px 10px 0 0;
+      padding: 1rem;
+    }
+
+    &--img {
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+  }
+}

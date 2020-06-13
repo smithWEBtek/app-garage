@@ -1,3 +1,23 @@
+<div class="cats-navbar">
+  <button class='newcat'>
+    <%= link_to 'All cats', cats_path %>
+  </button>
+  <button class='cats-index'>
+    <%= link_to 'New cat', newcat_path %>
+  </button>
+</div>
+
+<hr />
+
+<div class="cats">
+  <% @cats.each do |cat| %>
+    <div class='cats__cat'>
+      <h4 class='cats__cat--title'><%= cat.breed %>: <%= cat.name %></h4>
+      <%= image_tag src="#{cat.url}", class: 'cats__cat--img' %>
+    </div>
+  <% end %>
+</div>
+
 <div class="ui raised segment">
   <h1 class="ui header"><%= params[:query] %> (<%= @cats.count %> results)</h1>  
   <div class="ui divider"></div>
